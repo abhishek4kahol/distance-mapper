@@ -1,0 +1,19 @@
+{
+  "name": "distance-mapper",
+  "version": "2.0.0",
+  "description": "alexa skill lambda function to get the distance between two cities, currently for indian cities but can be extend to other countries",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "fact"
+  ],
+  "author": "Amazon.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ask-sdk": "^2.0.0"
+  }
+}

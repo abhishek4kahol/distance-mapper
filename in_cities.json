@@ -1,0 +1,452 @@
+{
+  "pune": {
+    "city": "pune",
+    "latitude": "18.533333",
+    "longitude": "73.866667"
+  },
+  "ahmedabad": {
+    "city": "ahmedabad",
+    "latitude": "23.033333",
+    "longitude": "72.616667"
+  },
+  "mumbai": {
+    "city": "mumbai",
+    "latitude": "18.975",
+    "longitude": "72.825833"
+  },
+  "delhi": {
+    "city": "delhi",
+    "latitude": "28.666667",
+    "longitude": "77.216667"
+  },
+  "bangalore": {
+    "city": "bangalore",
+    "latitude": "12.983333",
+    "longitude": "77.583333"
+  },
+  "hyderabad": {
+    "city": "hyderabad",
+    "latitude": "17.375278",
+    "longitude": "78.474444"
+  },
+    "chennai": {
+    "city": "chennai",
+    "latitude": "13.083333",
+    "longitude": "80.283333"
+  },
+  "kolkata": {
+    "city": "kolkata",
+    "latitude": "22.569722",
+    "longitude": "88.369722"
+  },
+  "surat": {
+    "city": "surat",
+    "latitude": "20.966667",
+    "longitude": "72.9"
+  },
+  "jaipur": {
+    "city": "jaipur",
+    "latitude": "24.583333",
+    "longitude": "86.85"
+  },
+  "lucknow": {
+    "city": "lucknow",
+    "latitude": "26.85",
+    "longitude": "80.916667"
+  },
+  "kanpur": {
+    "city": "kanpur",
+    "latitude": "26.466667",
+    "longitude": "80.35"
+  },
+  "nagpur": {
+    "city": "nagpur",
+    "latitude": "23.3",
+    "longitude": "82.3"
+  },
+  "visakhapatnam": {
+    "city": "visakhapatnam",
+    "latitude": "17.7",
+    "longitude": "83.3"
+  },
+  "indore": {
+    "city": "indore",
+    "latitude": "22.716667",
+    "longitude": "75.833333"
+  },
+  "thane": {
+    "city": "thane",
+    "latitude": "19.2",
+    "longitude": "72.966667"
+  },
+  "bhopal": {
+    "city": "bhopal",
+    "latitude": "23.266667",
+    "longitude": "77.4"
+  },
+  "patna": {
+    "city": "patna",
+    "latitude": "23.3",
+    "longitude": "82.666667"
+  },
+  "vadodara": {
+    "city": "vadodara",
+    "latitude": "22.3",
+    "longitude": "73.2"
+  },
+  "ghaziabad": {
+    "city": "ghaziabad",
+    "latitude": "28.666667",
+    "longitude": "77.433333"
+  },
+  "ludhiana": {
+    "city": "ludhiana",
+    "latitude": "30.9",
+    "longitude": "75.85"
+  },
+  "coimbatore": {
+    "city": "coimbatore",
+    "latitude": "10.9925",
+    "longitude": "76.961389"
+  },
+  "agra": {
+    "city": "agra",
+    "latitude": "27.183333",
+    "longitude": "78.016667"
+  },
+  "madurai": {
+    "city": "madurai",
+    "latitude": "9.933333",
+    "longitude": "78.116667"
+  },
+  "faridabad": {
+    "city": "faridabad",
+    "latitude": "28.433333",
+    "longitude": "77.316667"
+  },
+  "meerut": {
+    "city": "meerut",
+    "latitude": "28.983333",
+    "longitude": "77.7"
+  },
+  "rajkot": {
+    "city": "rajkot",
+    "latitude": "25.731111",
+    "longitude": "75.5925"
+  },
+  "varanasi": {
+    "city": "varanasi",
+    "latitude": "25.333333",
+    "longitude": "83"
+  },
+  "srinagar": {
+    "city": "srinagar",
+    "latitude": "30.216667",
+    "longitude": "78.783333"
+  },
+  "aurangabad": {
+    "city": "aurangabad",
+    "latitude": "27.783333",
+    "longitude": "80.35"
+  },
+  "dhanbad": {
+    "city": "dhanbad",
+    "latitude": "23.8",
+    "longitude": "86.45"
+  },
+  "amritsar": {
+    "city": "amritsar",
+    "latitude": "31.633056",
+    "longitude": "74.865556"
+  },
+  "allahabad": {
+    "city": "allahabad",
+    "latitude": "25.45",
+    "longitude": "81.85"
+  },
+  "ranchi": {
+    "city": "ranchi",
+    "latitude": "23.35",
+    "longitude": "85.333333"
+  },
+  "howrah": {
+    "city": "howrah",
+    "latitude": "22.589167",
+    "longitude": "88.310278"
+  },
+  "jabalpur": {
+    "city": "jabalpur",
+    "latitude": "23.166667",
+    "longitude": "79.95"
+  },
+  "gwalior": {
+    "city": "gwalior",
+    "latitude": "26.223611",
+    "longitude": "78.179167"
+  },
+  "vijayawada": {
+    "city": "vijayawada",
+    "latitude": "16.516667",
+    "longitude": "80.616667"
+  },
+  "jodhpur": {
+    "city": "jodhpur",
+    "latitude": "26.286667",
+    "longitude": "73.03"
+  },
+  "raipur": {
+    "city": "raipur",
+    "latitude": "30.316667",
+    "longitude": "78.1"
+  },
+  "kota": {
+    "city": "kota",
+    "latitude": "29.4",
+    "longitude": "79.3"
+  },
+  "guwahati": {
+    "city": "guwahati",
+    "latitude": "26.183333",
+    "longitude": "91.733333"
+  },
+  "chandigarh": {
+    "city": "chandigarh",
+    "latitude": "30.737222",
+    "longitude": "76.787222"
+  },
+  "solapur": {
+    "city": "solapur",
+    "latitude": "17.683333",
+    "longitude": "75.916667"
+  },
+    "tiruchirappalli": {
+      "city": "tiruchirappalli",
+      "latitude": "10.805",
+      "longitude": "78.685556"
+  },
+  "bareilly": {
+    "city": "bareilly",
+    "latitude": "28.35",
+    "longitude": "79.416667"
+  },
+  "mysore": {
+    "city": "mysore",
+    "latitude": "12.307222",
+    "longitude": "76.649722"
+  },
+  "tiruppur": {
+    "city": "tiruppur",
+    "latitude": "11.1",
+    "longitude": "77.35"
+  },
+  "gurgaon": {
+    "city": "gurgaon",
+    "latitude": "19.333333",
+    "longitude": "77.283333"
+  },
+  "aligarh": {
+    "city": "aligarh",
+    "latitude": "27.883333",
+    "longitude": "78.083333"
+  },
+  "jalandhar": {
+    "city": "jalandhar",
+    "latitude": "23.9",
+    "longitude": "78.433333"
+  },
+  "bhubaneswar": {
+    "city": "bhubaneswar",
+    "latitude": "20.233333",
+    "longitude": "85.833333"
+  },
+  "salem": {
+    "city": "salem",
+    "latitude": "15.7",
+    "longitude": "73.916667"
+  },
+  "warangal": {
+    "city": "warangal",
+    "latitude": "18",
+    "longitude": "79.583333"
+  },
+  "thiruvananthapuram": {
+    "city": "thiruvananthapuram",
+    "latitude": "8.506944",
+    "longitude": "76.956944"
+  },
+  "guntur": {
+    "city": "guntur",
+    "latitude": "16.3",
+    "longitude": "80.45"
+  },
+  "bhiwandi": {
+    "city": "bhiwandi",
+    "latitude": "19.3",
+    "longitude": "73.066667"
+  },
+  "saharanpur": {
+    "city": "saharanpur",
+    "latitude": "29.966667",
+    "longitude": "77.55"
+  },
+  "gorakhpur": {
+    "city": "gorakhpur",
+    "latitude": "26.755",
+    "longitude": "83.373889"
+  },
+  "bikaner": {
+    "city": "bikaner",
+    "latitude": "28.016667",
+    "longitude": "73.3"
+  },
+  "amravati": {
+    "city": "amravati",
+    "latitude": "20.933333",
+    "longitude": "77.75"
+  },
+  "noida": {
+    "city": "noida",
+    "latitude": "28.6229",
+    "longitude": "77.364"
+  },
+  "jamshedpur": {
+    "city": "jamshedpur",
+    "latitude": "22.8",
+    "longitude": "86.183333"
+  },
+  "bhilai": {
+    "city": "bhilai",
+    "latitude": "21.216667",
+    "longitude": "81.433333"
+  },
+  "cuttack": {
+    "city": "cuttack",
+    "latitude": "20.5",
+    "longitude": "85.833333"
+  },
+  "firozabad": {
+    "city": "firozabad",
+    "latitude": "27.15",
+    "longitude": "78.416667"
+  },
+  "kochi": {
+    "city": "kochi",
+    "latitude": "9.966667",
+    "longitude": "76.233333"
+  },
+  "ajmer": {
+    "city": "ajmer",
+    "latitude": "26.45",
+    "longitude": "74.633333"
+  },
+  "jamnagar": {
+    "city": "jamnagar",
+    "latitude": "22.466667",
+    "longitude": "70.066667"
+  },
+  "ujjain": {
+    "city": "ujjain",
+    "latitude": "23.183333",
+    "longitude": "75.766667"
+  },
+  "siliguri": {
+    "city": "siliguri",
+    "latitude": "26.716111",
+    "longitude": "88.423611"
+  },
+  "jhansi": {
+    "city": "jhansi",
+    "latitude": "25.433333",
+    "longitude": "78.583333"
+  },
+  "jammu": {
+    "city": "jammu",
+    "latitude": "32.733333",
+    "longitude": "74.866667"
+  },
+  "udaipur": {
+    "city": "udaipur",
+    "latitude": "23.533333",
+    "longitude": "91.483333"
+  },
+  "patiala": {
+    "city": "patiala",
+    "latitude": "30.326667",
+    "longitude": "76.400278"
+  },
+  "agartala": {
+    "city": "agartala",
+    "latitude": "23.836389",
+    "longitude": "91.275"
+  },
+  "tirupati": {
+    "city": "tirupati",
+    "latitude": "13.65",
+    "longitude": "79.416667"
+  },
+  "rohtak": {
+    "city": "rohtak",
+    "latitude": "28.9",
+    "longitude": "76.566667"
+  },
+  "ahmednagar": {
+    "city": "ahmednagar",
+    "latitude": "19.083333",
+    "longitude": "74.733333"
+  },
+  "muzaffarpur": {
+    "city": "muzaffarpur",
+    "latitude": "26.116667",
+    "longitude": "85.4"
+  },
+  "mathura": {
+    "city": "mathura",
+    "latitude": "27.5",
+    "longitude": "77.683333"
+  },
+  "bilaspur": {
+    "city": "bilaspur",
+    "latitude": "22.083333",
+    "longitude": "82.15"
+  },
+  "panipat": {
+    "city": "panipat",
+    "latitude": "29.388889",
+    "longitude": "76.968056"
+  },
+  "sonipat": {
+    "city": "sonipat",
+    "latitude": "28.983333",
+    "longitude": "77.016667"
+  },
+  "new delhi": {
+    "city": "new delhi",
+    "latitude": "28.6",
+    "longitude": "77.2"
+  },
+  "pondicherry": {
+    "city": "pondicherry",
+    "latitude": "11.93",
+    "longitude": "79.83"
+  },
+  "mirzapur": {
+    "city": "mirzapur",
+    "latitude": "25.15",
+    "longitude": "82.583333"
+  },
+  "haridwar": {
+    "city": "haridwar",
+    "latitude": "29.966667",
+    "longitude": "78.166667"
+  },
+  "vellore": {
+    "city": "vellore",
+    "latitude": "12.933333",
+    "longitude": "79.133333"
+  },
+    "kolhapur": {
+    "city": "kolhapur",
+    "latitude": "16.7",
+    "longitude": "74.216667"
+  }
+}
