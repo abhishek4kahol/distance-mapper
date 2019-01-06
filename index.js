@@ -1,6 +1,6 @@
 const Alexa = require('ask-sdk');
 const cities_json = require('./in_cities.json');
-
+const { get } = require('https');
 const API_key = 'should -contain-your-bing-api-key';
 
 const LaunchRequestHandler = {
@@ -11,7 +11,7 @@ const LaunchRequestHandler = {
     const speakOutput = 'Welcome to Distancer. You can search distance between two different cities in India.';
 
     return handlerInput.responseBuilder
-      .speak(speakOutput) 
+      .speak(speakOutput)
       .getResponse();
   },
 };
@@ -26,7 +26,7 @@ const HelloHandler = {
     const speakOutput = 'Hi ! Welcome to Distancer. You can search distance between two different cities in India.';
 
     return handlerInput.responseBuilder
-      .speak(speakOutput) 
+      .speak(speakOutput)
       .getResponse();
   },
 };
@@ -35,70 +35,51 @@ const DistanceHandler = {
   canHandle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
     return (request.type === 'IntentRequest'
-        && request.intent.name === 'DistanceIntent');
+      && request.intent.name === 'DistanceIntent');
   },
   async handle(handlerInput) {
 
     let speakOutput = '';
-    let origin = handlerInput.requestEnvelope.request.intent.slots.start.value;
-    let destination = handlerInput.requestEnvelope.request.intent.slots.end.value;
-    if (origin && destination) { 
-      
-      if(origin === destination) {
-      
+    let origin = handlerInput.requestEnvelope.request.intent.slots.start.value.toLowerCase();
+    let destination = handlerInput.requestEnvelope.request.intent.slots.end.value.toLowerCase();
+    if (origin && destination) {
+      if (origin === destination) {
         speakOutput = 'think out of your city.';
       } else {
-        
-        const cities = [origin.toLowerCase(), destination.toLowerCase()];
-        let count = 0;
-        const citiesDetails = [];
-        
-        for (var key in cities_json) {
-          if (key === cities[0]) {
-            count++;
-            citiesDetails.push(cities_json[key]);
-          }
-          if(key === cities[1]) {
-            count++;
-            citiesDetails.push(cities_json[key]);
-          }
-          if (count === 2) {
-            break;
-          }
-        }
-        if(count !== 2) {
-          speakOutput = 'I don\'t have data about that, will collect in sometime.';
-        }  else {
+        let orginDetails = cities_json[origin];
+        let destinationDetails = cities_json[destination]
+
+        if (orginDetails && destinationDetails) {
           let DistanceObject = {
-          "origins": [{
-            "latitude": citiesDetails[0].latitude,
-            "longitude": citiesDetails[0].longitude
-          }],
-          "destinations": [{
-            "latitude": citiesDetails[1].latitude,
-            "longitude": citiesDetails[1].longitude
-          }],
-          "travelMode": "driving"
-        };
-        const url = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins='+DistanceObject.origins[0].latitude
-        +','+DistanceObject.origins[0].longitude+'&destinations='+DistanceObject.destinations[0].latitude+','+
-        DistanceObject.destinations[0].longitude+'&travelMode=driving&key='+ API_key
-        await getRemoteData(url)
-        .then((response) => {
-          let data = JSON.parse(response);
-          let result = data.resourceSets[0].resources[0].results[0];
-          speakOutput = 'The distance between ' + origin + ' and ' + destination + ' is '+ result.travelDistance.toFixed(2) + ' Kilometers.';
-        })
-        .catch((err) => {
-          speakOutput = err.message;
-        }); 
+            origins: {
+              latitude: orginDetails.latitude,
+              longitude: orginDetails.longitude
+            },
+            destinations: {
+              latitude: destinationDetails.latitude,
+              longitude: destinationDetails.longitude
+            }
+          };
+          const url = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins=' + DistanceObject.origins.latitude
+            + ',' + DistanceObject.origins.longitude + '&destinations=' + DistanceObject.destinations.latitude + ',' +
+            DistanceObject.destinations.longitude + '&travelMode=driving&key=' + API_key
+          console.log('here we are');
+          try {
+            let data = await getRemoteData(url);
+            let result = data.resourceSets[0].resources[0].results[0];
+            speakOutput = 'The distance between ' + origin + ' and ' + destination + ' is ' + result.travelDistance + ' Kilometers.';
+          } catch (error) {
+            speakOutput = error;
+          }
+        } else {
+          speakOutput = 'I don\'t have data about that, will collect in sometime.';
         }
       }
     } else {
       speakOutput = 'some problem in taking the input.please try agin wih valid input.';
-    }   
+    }
     return handlerInput.responseBuilder
-      .speak(speakOutput) 
+      .speak(speakOutput)
       .getResponse();
   },
 };
@@ -159,17 +140,18 @@ const ErrorHandler = {
 
 const getRemoteData = function (url) {
   return new Promise((resolve, reject) => {
-    const client = url.startsWith('https') ? require('https') : require('http');
-    const request = client.get(url, (response) => {
+    get(url, (response) => {
       if (response.statusCode === 200) {
         let body = [];
         response.on('data', (chunk) => body.push(chunk));
-        response.on('end', () => resolve(body.join('')));
+        response.on('end', () => {
+          let res = body.join('');
+          resolve(JSON.parse(res));
+        })
       } else {
-        reject ('please try again.');
+        reject('please try again.');
       }
     });
-    request.on('error', (err) => reject(err));
   });
 };
 
@@ -184,7 +166,7 @@ exports.handler = skillBuilder
     HelpHandler,
     CancelAndStopHandler,
     SessionEndedRequestHandler
-  	
+
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();
