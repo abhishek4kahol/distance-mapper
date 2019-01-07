@@ -50,19 +50,9 @@ const DistanceHandler = {
         let destinationDetails = cities_json[destination]
 
         if (orginDetails && destinationDetails) {
-          let DistanceObject = {
-            origins: {
-              latitude: orginDetails.latitude,
-              longitude: orginDetails.longitude
-            },
-            destinations: {
-              latitude: destinationDetails.latitude,
-              longitude: destinationDetails.longitude
-            }
-          };
-          const url = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins=' + DistanceObject.origins.latitude
-            + ',' + DistanceObject.origins.longitude + '&destinations=' + DistanceObject.destinations.latitude + ',' +
-            DistanceObject.destinations.longitude + '&travelMode=driving&key=' + API_key
+          const url = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins=' + orginDetails.latitude
+            + ',' + orginDetails.longitude + '&destinations=' + destinationDetails.latitude + ',' +
+            destinationDetails.longitude + '&travelMode=driving&key=' + API_key
           console.log('here we are');
           try {
             let data = await getRemoteData(url);
