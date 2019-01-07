@@ -2,6 +2,7 @@ const Alexa = require('ask-sdk');
 const cities_json = require('./in_cities.json');
 const { get } = require('https');
 const API_key = 'should -contain-your-bing-api-key';
+const fileLogger = require("./logger").fileLogger;
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
@@ -53,7 +54,6 @@ const DistanceHandler = {
           const url = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins=' + orginDetails.latitude
             + ',' + orginDetails.longitude + '&destinations=' + destinationDetails.latitude + ',' +
             destinationDetails.longitude + '&travelMode=driving&key=' + API_key
-          console.log('here we are');
           try {
             let data = await getRemoteData(url);
             let result = data.resourceSets[0].resources[0].results[0];
@@ -62,6 +62,7 @@ const DistanceHandler = {
             speakOutput = error;
           }
         } else {
+          fileLogger('CollectData', 'origin: '+ origin + ' and destination: '+ destination)
           speakOutput = 'I don\'t have data about that, will collect in sometime.';
         }
       }

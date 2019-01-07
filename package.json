@@ -14,6 +14,7 @@
   "author": "Amazon.com",
   "license": "Apache-2.0",
   "dependencies": {
-    "ask-sdk": "^2.0.0"
+    "ask-sdk": "^2.0.0",
+    "moment": "^2.23.0"
   }
 }
